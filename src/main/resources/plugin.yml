@@ -1,5 +1,5 @@
-name: NKblank
-main: be.noki_senpai.NKblank.NKblank
+name: ${project.name}
+main: ovh.lumen.NKblank.NKblank
 version: ${project.version}
 api-version: 1.18
 author: 'NoKi_senpai'
@@ -7,9 +7,6 @@ description: 'Blank NK plugin'
 website: www.lumen.ovh
 depend: [NKcore]
 commands:
-  mycommand:
-    description: "a command"
-    usage: /<command>
-  mycommandwithsubcommands:
-    description: "a command with subcommands"
-    usage: /<command> <subcommand>
+  ${project.name}:
+    description: "The root plugin command"
+    usage: /<command> [subcommand]

@@ -1,0 +1,41 @@
+package ovh.lumen.NKblank.commands.Root;
+
+import ovh.lumen.NKblank.data.NKData;
+import ovh.lumen.NKblank.enums.Messages;
+import ovh.lumen.NKblank.enums.Permissions;
+import ovh.lumen.NKblank.utils.MessageParser;
+import org.bukkit.command.CommandSender;
+
+public class Reload
+{
+	public Reload()
+	{
+
+	}
+
+	public boolean reload(CommandSender sender, String[] args)
+	{
+		if(!hasReloadPermissions(sender))
+		{
+			sender.sendMessage(Messages.PERMISSION_MISSING.toString());
+
+			return true;
+		}
+
+		NKData.PLUGIN.reload();
+
+		MessageParser messageParser = new MessageParser(Messages.ROOT_RELOAD_MSG.toString());
+		messageParser.addArg(NKData.PLUGIN_NAME);
+
+		sender.sendMessage(messageParser.parse());
+
+		return true;
+	}
+
+	private boolean hasReloadPermissions(CommandSender sender)
+	{
+		return sender.hasPermission(Permissions.ROOT_RELOAD_CMD.toString()) ||
+				sender.hasPermission(Permissions.USER.toString()) ||
+				sender.hasPermission(Permissions.ADMIN.toString());
+	}
+}
