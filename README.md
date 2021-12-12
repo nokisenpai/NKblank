@@ -10,7 +10,6 @@ A blank plugin to create a new plugin under the NK standard
 4. Open the project with IntelliJ
 5. Go to `File > Project Structure... > Modules` and rename NKblank module as you want
 6. Open the pom.xml and rename the `artifactId` and `name` as you want
-7. Rename NKblank class with the same name in pom.xml
 8. Rename NKblank package with the same name in pom.xml
 9. Create a new repository in git
 10. In IntelliJ run `git init`

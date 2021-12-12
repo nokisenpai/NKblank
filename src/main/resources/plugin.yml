@@ -1,5 +1,5 @@
 name: ${project.name}
-main: ovh.lumen.${project.name}.${project.name}
+main: ovh.lumen.${project.name}.Main
 version: ${project.version}
 api-version: 1.18
 author: 'NoKi_senpai'

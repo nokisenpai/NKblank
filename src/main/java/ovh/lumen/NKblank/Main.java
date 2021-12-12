@@ -15,7 +15,7 @@ import ovh.lumen.NKblank.registers.CompleterRegister;
 import ovh.lumen.NKblank.registers.ListenerRegister;
 import ovh.lumen.NKblank.utils.NKLogger;
 
-public class NKblank extends JavaPlugin implements NKplugin
+public class Main extends JavaPlugin implements NKplugin
 {
 	@Override
 	public void onEnable()
