@@ -37,9 +37,9 @@ public class CompleterRegister
 
 	private static Map<String, TabCompleter> setCompleters()
 	{
-		Map<String, TabCompleter> commands = new HashMap<>();
-		commands.put(NKData.PLUGIN_NAME, new RootCompleter());
+		Map<String, TabCompleter> completers = new HashMap<>();
+		completers.put(NKData.PLUGIN_NAME, new RootCompleter());
 
-		return commands;
+		return completers;
 	}
 }

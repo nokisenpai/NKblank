@@ -53,7 +53,5 @@ public final class ConfigManager
 		}
 
 		NKLogger.setLogLevel(NKData.LOGLEVEL);
-
-		//throw new SetupException("My exception message");
 	}
 }

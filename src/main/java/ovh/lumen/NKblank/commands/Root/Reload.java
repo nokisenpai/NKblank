@@ -3,17 +3,18 @@ package ovh.lumen.NKblank.commands.Root;
 import ovh.lumen.NKblank.data.NKData;
 import ovh.lumen.NKblank.enums.Messages;
 import ovh.lumen.NKblank.enums.Permissions;
+import ovh.lumen.NKblank.interfaces.SubCommand;
 import ovh.lumen.NKblank.utils.MessageParser;
 import org.bukkit.command.CommandSender;
 
-public class Reload
+public class Reload implements SubCommand
 {
 	public Reload()
 	{
 
 	}
 
-	public boolean reload(CommandSender sender, String[] args)
+	public boolean execute(CommandSender sender, String[] args)
 	{
 		if(!hasReloadPermissions(sender))
 		{

@@ -33,7 +33,7 @@ public class RootCmd implements CommandExecutor
 			switch(args[0])
 			{
 				case "reload":
-					return new Reload().reload(sender, args);
+					return new Reload().execute(sender, args);
 				default:
 					sender.sendMessage(Usages.ROOT_CMD.toString());
 			}
