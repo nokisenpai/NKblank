@@ -101,16 +101,16 @@ public final class DatabaseManager
 	{
 		String req = "SHOW TABLES FROM " + NKData.DBACCESS.getDbName() + " LIKE '" + NKData.PREFIX + "%'";
 
-		try(PreparedStatement ps = bdd.prepareStatement(req); ResultSet resultat = ps.executeQuery())
+		try(PreparedStatement ps = bdd.prepareStatement(req); ResultSet result = ps.executeQuery())
 		{
 			int count = 0;
 
-			while(resultat.next())
+			while(result.next())
 			{
 				count++;
 			}
 
-			resultat.close();
+			result.close();
 			ps.close();
 
 			if(count < Tables.values().length)

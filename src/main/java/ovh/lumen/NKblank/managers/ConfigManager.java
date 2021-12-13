@@ -44,7 +44,7 @@ public final class ConfigManager
 
 		try
 		{
-			NKData.LOGLEVEL = LogLevel.valueOf(config.getString("log-level", "LOG"));
+			NKData.LOGLEVEL = LogLevel.valueOf(config.getString("log-level", "LOG").toUpperCase());
 		}
 		catch(IllegalArgumentException e)
 		{

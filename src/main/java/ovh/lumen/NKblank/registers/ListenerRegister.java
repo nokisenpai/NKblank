@@ -1,8 +1,9 @@
 package ovh.lumen.NKblank.registers;
 
-import ovh.lumen.NKblank.listeners.PlayerListener;
+import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+import ovh.lumen.NKblank.listeners.PlayerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,11 @@ public class ListenerRegister
 		listeners.forEach(listener -> {
 			plugin.getServer().getPluginManager().registerEvents(listener, plugin);
 		});
+	}
+
+	public static void unregisterAllListeners(JavaPlugin plugin)
+	{
+		HandlerList.unregisterAll(plugin);
 	}
 
 	private static List<Listener> setListeners()

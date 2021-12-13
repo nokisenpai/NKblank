@@ -70,6 +70,7 @@ public class Main extends JavaPlugin implements NKplugin
 	public void clean()
 	{
 		DatabaseManager.unload();
+		ListenerRegister.unregisterAllListeners(this);
 	}
 
 	@Override
