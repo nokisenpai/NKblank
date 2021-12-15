@@ -36,7 +36,6 @@ public class Reload implements SubCommand
 	private boolean hasReloadPermissions(CommandSender sender)
 	{
 		return sender.hasPermission(Permissions.ROOT_RELOAD_CMD.toString()) ||
-				sender.hasPermission(Permissions.USER.toString()) ||
 				sender.hasPermission(Permissions.ADMIN.toString());
 	}
 }

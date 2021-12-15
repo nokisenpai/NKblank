@@ -54,7 +54,6 @@ public class RootCmd implements CommandExecutor
 	private boolean hasRootPermissions(CommandSender sender)
 	{
 		return sender.hasPermission(Permissions.ROOT_CMD.toString()) ||
-				sender.hasPermission(Permissions.USER.toString()) ||
 				sender.hasPermission(Permissions.ADMIN.toString());
 	}
 }
